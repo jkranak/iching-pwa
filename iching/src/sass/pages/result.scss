@@ -1,0 +1,70 @@
+.result {
+  @include flex-column;
+  margin: auto;
+  width: 30vw;
+  background-color: $color-primary-light;
+  padding: 2rem;
+  &__body {
+    border: 1.5rem solid $color-primary-lighter;
+    @include flex-column;
+    padding: .5rem;
+  }
+  &__table {
+    border-collapse: collapse;
+    vertical-align: center;
+  }
+  &__head {
+    border-bottom: 2px solid $color-tertiary-darker;
+  }
+  &__linenum {
+    font-size: 1rem;
+    width: 3rem;
+    text-align: right;
+    padding: 0 1.2rem;
+    background-color: $color-primary-darker;
+    color: $color-primary-lighter;
+  }
+  &__hexlines {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+  &__lines {
+    text-align: center;
+    justify-self: center;
+    letter-spacing: -.2rem;
+  }
+  &__infobox {
+    border: .5rem solid $color-primary-darker;
+  }
+  &__hexinfos {
+    @include flex-row;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1.2rem 0 0 0;
+  }
+  &__questiontext {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem;
+  }
+  &__hexagram {
+    font-size: 7rem;
+  }
+  &__moreinfo {
+    @include flex-column;
+    p {
+      text-align: center;
+    }
+  }
+  &__changing {
+    @include flex-column;
+    p {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}

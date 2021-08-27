@@ -1,0 +1,17 @@
+.switch {
+  text-align: center;
+  background-color: $color-primary-darker;
+  position: fixed;
+  left: 2vw;
+  width: 12rem;
+  p {
+    margin: .5rem 0;
+    color: $color-primary-lighter;
+  }
+  a {
+    color: $color-primary-light;
+  }
+  button {
+    width: 8rem;
+  }
+}

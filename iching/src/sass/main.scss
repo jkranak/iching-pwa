@@ -1,0 +1,14 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+
+@import 'pages/home';
+@import 'pages/explanation';
+@import 'pages/404';
+@import 'pages/result';
+@import 'pages/browse';
+
+@import 'components/navbar';
+@import 'components/translation';
+@import 'components/switch';

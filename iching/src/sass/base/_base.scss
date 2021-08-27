@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: $main-font;
+  color: $color-tertiary-darker;
+  background-color: $color-primary-lighter;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: $color-primary-dark;
+  color: inherit;
+  font-size: inherit;
+  padding: 1rem;
+  margin: 1vw;
+  font-size: 1.3rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+p {
+  font-size: 1.3rem ;
+}

@@ -1,0 +1,53 @@
+.home {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 6fr;
+  text-align: center;
+  width: 55vw;
+  margin: auto;
+  height: 75vh;
+  background-color: $color-primary-light;
+  h1 {
+    font-size: xx-large;
+  }
+  h2 {
+    font-size: x-large;
+  }
+  &__title {
+    line-height: 5rem;
+    grid-row-start: 2;
+  }
+  &__button {
+    width: 15rem;
+  }
+  &__form {
+    line-height: 3.5rem;
+    grid-row-start: 4;
+  }
+  &__input {
+    width: 30vw;
+  }
+  &__p {
+    font-size: large;
+    grid-row-start: 3;
+  }
+  &__info {
+    position: fixed;
+    display:inline;
+    float: left;
+    background-color: white;
+    width: 30%;
+    text-align: left;
+    line-height: 1.3rem;
+    box-shadow: $box-shadow;
+    border-radius: 10px;
+    p {
+      margin: .5rem;
+    }
+  }
+  &__infobutton {
+    padding: .2rem;
+    background-color: white;
+    border-radius: 100%;
+    font-weight: 800;
+  }
+}
