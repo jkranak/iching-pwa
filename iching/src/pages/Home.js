@@ -34,7 +34,7 @@ export default function Home () {
           </div>
           <div>
             <button id="yarrow" className="home__button" onClick={handleSubmit}>Yarrow-Stalk Method</button>
-            <button id="coin" className="home__button" onClick={handleSubmit}>Coin Method</button>
+            <button id="coin" className="home__button" onClick={handleSubmit}>Three-Coin Method</button>
             <button className="home__infobutton" onMouseEnter={() => setMethodHover(true)} onMouseLeave={() => setMethodHover(false)} onClick={() => history.push('/explanation')}>?</button>
             <div className="home__info">
               {methodHover && <MethodInfo />}
