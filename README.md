@@ -21,6 +21,10 @@ Joseph Kranak  [![LinkedIn][linkedin-shield]][linkedin-url]
 ![I Ching Screen Shot](./preview_images/iching-preview1.png)
 ![I Ching Screen Shot](./preview_images/iching-preview2.png)
 
+This is a very light application. All data needed is stored in four JSON files in the data folder, including three separate translations. I used translations by [James Legge](https://sacred-texts.com/ich/), [Richard Wilhelm](http://www.pantherwebworks.com/i_ching/index.html) and [Gregory C. Richter](http://grichter.sites.truman.edu/files/2012/01/yjnew.pdf). There are many other translations, but I chose these because they are in the public domain and are each quite different from each other.
+
+The page has the option of consulting the I Ching using the yarrow-stalk or three-coin methods. The yarrow-stalk method is the traditional method, whereas the coin method is more popular (because it's simpler). For the purpose of this website, the difference between them is simply in the odds of certain types of changing lines. More information about the methods can be found [here](https://en.wikipedia.org/wiki/I_Ching_divination#Yarrow_stalks) and [here](https://www.instructables.com/Consult-the-I-Ching-with-Yarrow-Stalks/), and you can check this project's [explainer](./iching/src/pages/Explanation.js) on the methods, which I wrote.
+
 ### Built With
 
 * [React](https://getbootstrap.com)
