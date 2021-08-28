@@ -11,7 +11,7 @@ export default function Result() {
   const result = otherInfo(div, question);
   const [onLeftHover, setOnLeftHover] = useState(false);
   const [onRightHover, setOnRightHover] = useState(false);
-  console.log(onLeftHover);
+  
   function lineRender (num) {
     if (num === '7') return '—————';
     if (num === '8') return '——&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——';
