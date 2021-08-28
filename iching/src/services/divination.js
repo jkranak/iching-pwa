@@ -37,9 +37,8 @@ export function hexagram (method) {
   return divination.join('');
 }
 
-export function otherInfo (divStr, method, question) {
-  if (!divStr || !method) return null;
-  if (method !== 'yarrow' && method !== 'coin') return null;
+export function otherInfo (divStr, question) {
+  if (!divStr) return null;
   const divination = divStr.split('');
   if (divination.length !== 6) return null;
   for (let num of divination) {
@@ -71,16 +70,14 @@ export function otherInfo (divStr, method, question) {
     return {
       divination: divination.reverse(), 
       numbers: [hexNumber[divination1], hexNumber[divinationChange]], 
-      lines, 
-      method,
+      lines,
       question
     };
   }
   return {
     divination: divination.reverse(), 
     numbers: [hexNumber[divination.join('')]], 
-    lines: [], 
-    method,
+    lines: [],
     question
   };
 }

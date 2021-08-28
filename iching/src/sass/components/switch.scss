@@ -1,17 +1,49 @@
 .switch {
   text-align: center;
   background-color: $color-primary-darker;
-  position: fixed;
-  left: 2vw;
+  position: sticky;
+  top: 5vw;
+  left: 1.5vw;
   width: 12rem;
+  padding: .3rem;
+  @include tablet {
+    width: 8rem;
+    left: 1vw;
+    padding: .2rem;
+  }
+  @include phone {
+    width: 7rem;
+    left: 0;
+    padding: .1rem;
+  }
+  @include mini {
+    width: 5rem;
+    left: 0;
+    padding: 0;
+  }
   p {
     margin: .5rem 0;
     color: $color-primary-lighter;
+    @include mini {
+      font-size: .9rem;
+    }
   }
   a {
     color: $color-primary-light;
   }
   button {
     width: 8rem;
+    @include tablet {
+      width: 6rem;
+    }
+    @include phone {
+      padding: .1rem;
+      width: 5rem;
+    }
+    @include mini {
+      font-size: .9rem;
+      padding: 0;
+      width: 4rem;
+    }
   }
 }

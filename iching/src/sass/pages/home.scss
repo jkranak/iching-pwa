@@ -43,11 +43,26 @@
     p {
       margin: .5rem;
     }
+    @include tablet {
+      width: 25%;
+    }
+    @include phone {
+      width: 15%;
+    }
+    @include mini {
+      width: 10%;
+    }
   }
   &__infobutton {
     padding: .2rem;
     background-color: white;
     border-radius: 100%;
     font-weight: 800;
+  }
+  @include tablet {
+    width: 70vw;
+  }
+  @include phone {
+    width: 85vw;
   }
 }

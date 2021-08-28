@@ -1,13 +1,17 @@
+import {useState} from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import hexdict from '../data/hexdict.json'
 import { otherInfo } from '../services/divination';
 import Navbar from '../components/Navbar';
 import Translation from '../components/Translation';
+import TrigramInfo from '../components/TrigramInfo';
 
 export default function Result() {
-  const {div, method, question} = useParams();
-  const result = otherInfo(div, method, question);
-
+  const {div, question} = useParams();
+  const result = otherInfo(div, question);
+  const [onLeftHover, setOnLeftHover] = useState(false);
+  const [onRightHover, setOnRightHover] = useState(false);
+  console.log(onLeftHover);
   function lineRender (num) {
     if (num === '7') return '—————';
     if (num === '8') return '——&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——';
@@ -46,24 +50,37 @@ export default function Result() {
           </table>
           {result["question"] && <><h3>Your question:</h3> <p className="result__questiontext">{result["question"]}</p></>}
             <div className="result__infobox">
-            <div className="result__hexinfos">
-              <div className="result__hexagram" dangerouslySetInnerHTML={{ __html: hexdict[result["numbers"][0]]["hexagram"]}}>
+              <div className="result__lefttrigram">
+                {onLeftHover && <TrigramInfo trigrams={hexdict[result["numbers"][0]].trigrams}/>}
               </div>
+            <div className="result__hexinfos">
+              <button className="result__hexagram" dangerouslySetInnerHTML={{ __html: hexdict[result["numbers"][0]]["hexagram"]}}
+              onMouseEnter={() => setOnLeftHover(true)}
+              onMouseLeave={() => setOnLeftHover(false)}
+              onClick={() => setOnLeftHover(!onLeftHover)}
+              ></button>
               <div className="result__moreinfo">
                 <h1>{result["numbers"][0]}</h1>
                 <p><span dangerouslySetInnerHTML={{ __html: hexdict[result["numbers"][0]]["chinese"]}}></span>:&nbsp;
                   <span>{hexdict[result["numbers"][0]]["pinyin"]}</span></p>
                 <p>"{hexdict[result["numbers"][0]]["english"]}"</p>
               </div>
-              {result["numbers"][1] && result.method !== 'lookup' && 
+              {result["numbers"][1] && 
                 <>
                   <div className="result__changing">
                     <p>changing</p>
                     <p>into</p>
                     <h1>&#8594;</h1>
                   </div>
+                  <div className="result__righttrigram">
+                    {onRightHover && <TrigramInfo trigrams={hexdict[result["numbers"][1]].trigrams}/>}
+                  </div>
                   <div className="result__hexinfos">
-                    <div className="result__hexagram" dangerouslySetInnerHTML={{ __html: hexdict[result["numbers"][1]]["hexagram"]}}></div>
+                    <button className="result__hexagram" dangerouslySetInnerHTML={{ __html: hexdict[result["numbers"][1]]["hexagram"]}}
+                      onMouseEnter={() => setOnRightHover(true)}
+                      onMouseLeave={() => setOnRightHover(false)}
+                      onClick={() => setOnRightHover(!onRightHover)}
+                    ></button>
                     <div className="result__moreinfo">
                       <h1>{result["numbers"][1]} </h1>
                       <p><span dangerouslySetInnerHTML={{ __html: hexdict[result["numbers"][1]]["chinese"]}}></span>: 

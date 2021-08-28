@@ -14,7 +14,7 @@ export default function App () {
       <BrowserRouter>
         <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/result/:div/:method/:question?" exact component={Result} />
+            <Route path="/result/:div/:question?" exact component={Result} />
             <Route path="/browse/:hex" exact component={Browse} />
             <Route path="/explanation" exact component={Explanation} />
             <Route path="/404" component={FourOFour}/>

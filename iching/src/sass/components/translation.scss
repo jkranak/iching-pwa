@@ -11,6 +11,11 @@
     margin: .5rem auto;
     background-color: $color-primary-light;
     width: 70vw;
+    padding: .8rem;
+    @include mini {
+      line-height: 1.7rem;
+      padding: .4rem;
+    }
   }
   h2 {
     text-align: center;

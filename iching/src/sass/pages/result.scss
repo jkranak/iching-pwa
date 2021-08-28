@@ -1,17 +1,26 @@
 .result {
   @include flex-column;
   margin: auto;
-  width: 30vw;
+  width: 42rem;
   background-color: $color-primary-light;
   padding: 2rem;
   &__body {
     border: 1.5rem solid $color-primary-lighter;
     @include flex-column;
     padding: .5rem;
+    @include phone {
+      background-color: $color-primary-light;
+    }
+    @include mini {
+      background-color: $color-primary-lighter;
+    }
   }
   &__table {
     border-collapse: collapse;
     vertical-align: center;
+    @include mini {
+      border: .5rem solid $color-primary-darker;
+    }
   }
   &__head {
     border-bottom: 2px solid $color-tertiary-darker;
@@ -35,6 +44,7 @@
   }
   &__infobox {
     border: .5rem solid $color-primary-darker;
+    position: relative;
   }
   &__hexinfos {
     @include flex-row;
@@ -51,6 +61,9 @@
   }
   &__hexagram {
     font-size: 7rem;
+    background-color: $color-primary-light;
+    padding: 0;
+    margin: .2rem;
   }
   &__moreinfo {
     @include flex-column;
@@ -66,5 +79,23 @@
     h1 {
       font-size: 3rem;
     }
+  }
+  &__lefttrigram {
+    position: absolute;
+    background-color: white;
+    box-shadow: $box-shadow;
+    transform: translateX(-15rem);
+  }
+  &__righttrigram {
+    position: absolute;
+    background-color: white;
+    box-shadow: $box-shadow;
+    transform: translateX(15rem);
+  }
+  @include phone {
+    background-color: $color-primary-lighter;
+  }
+  @include mini {
+    background-color: $color-primary-lighter;
   }
 }
