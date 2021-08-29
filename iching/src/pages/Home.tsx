@@ -1,4 +1,4 @@
-import React, { useState, ReactElement } from 'react';
+import { useState, ReactElement, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 import {hexagram} from '../services/divination';
 import Navbar from '../components/Navbar';
@@ -11,9 +11,9 @@ export default function Home (): ReactElement {
   const [questHover, setQuestHover] = useState(false);
   const [methodHover, setMethodHover] = useState(false);
 
-  function handleSubmit (event) {
+  function handleSubmit (event: FormEvent) {
     event.preventDefault();
-    const divResult = hexagram(event.target.id);
+    const divResult = hexagram((event.target as HTMLInputElement).id);
     history.push(`/result/${divResult}/${question}`)
   }
 
@@ -42,7 +42,6 @@ export default function Home (): ReactElement {
           </div>
         </form>
       </div>
-      
     </>
   )
 }

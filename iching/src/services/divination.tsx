@@ -1,8 +1,10 @@
-import hexNumber from '../data/hexnumber.json';
+import { HexNumberDict } from '../interfaces/dictionary';
 import {ResultI} from '../interfaces/result';
+const hexNumber: HexNumberDict = require('../data/hexnumber.json');
+
 
 function yarrowStalk () {
-  const remainders = num => num % 4 === 0 ? 4 : num % 4;
+  const remainders = (num: number) => num % 4 === 0 ? 4 : num % 4;
 
   let results: string[] = [];
   for (let i = 0; i < 6; i++) {
@@ -32,7 +34,7 @@ function coinMethod () {
 }
 
 export function hexagram (method: string) {
-  let divination = [];
+  let divination: string[] = [];
   if (method === 'yarrow') divination = yarrowStalk();
   else if (method === 'coin') divination = coinMethod();
   return divination.join('');
@@ -70,14 +72,14 @@ export function otherInfo (divStr: string, question: string): ResultI | null {
     }
     return {
       divination: divination.reverse(), 
-      numbers: [hexNumber[divination1], hexNumber[divinationChange]], 
+      numbers: [hexNumber[divination1].toString(), hexNumber[divinationChange].toString()], 
       lines,
       question
     };
   }
   return {
     divination: divination.reverse(), 
-    numbers: [hexNumber[divination.join('')]], 
+    numbers: [hexNumber[divination.join('')].toString()], 
     lines: [],
     question
   };

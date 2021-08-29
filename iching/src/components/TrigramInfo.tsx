@@ -1,5 +1,6 @@
-import React, {ReactElement} from 'react'
-import tridict from '../data/tridict.json'
+import {ReactElement} from 'react'
+import {TriDictionary} from '../interfaces/dictionary';
+const tridict: TriDictionary = require('../data/tridict.json');
 
 interface Props {
   trigrams: number[]

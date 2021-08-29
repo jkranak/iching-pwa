@@ -1,8 +1,10 @@
 import { useState, ReactElement } from 'react';
-import translations from '../data/translations.json';
-import hexdict from '../data/hexdict.json';
 import Switch from './Switch';
 import {ResultI} from '../interfaces/result';
+import {TranslationObj} from '../interfaces/translations';
+import {HexDictionary} from '../interfaces/dictionary';
+const translations: TranslationObj = require('../data/translations.json');
+const hexdict: HexDictionary = require('../data/hexdict.json');
 
 interface Props {
   hex: string,
@@ -36,8 +38,8 @@ export default function Translation({hex, result}: Props): ReactElement {
         {divResult.lines.length > 0 && 
           <>
             <h2>Line Commentary</h2> 
-            <div id="linecomm">{divResult.lines.map((el) => (
-              <p className="comments"  key={el + 24}>{el}: {translations[translator][divResult.numbers[0]][el].map((line, index) => (
+            <div id="linecomm">{divResult.lines.map((el, index) => (
+              <p className="comments"  key={index + 24}>{el}: {translations[translator][divResult.numbers[0]][el].map((line, index) => (
                 <span key={index + 30}>{line}</span>
               ))}</p>
             ))}</div>            

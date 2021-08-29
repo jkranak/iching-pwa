@@ -1,12 +1,17 @@
 import {ReactElement} from 'react';
 import { useParams, Redirect } from 'react-router-dom';
-import hexdict from '../data/hexdict.json'
+import {HexDictionary} from '../interfaces/dictionary';
 import Navbar from '../components/Navbar';
 import Translation from '../components/Translation';
 import {ResultI} from '../interfaces/result';
+const hexdict: HexDictionary = require('../data/hexdict.json');
+
+interface Params {
+  hex: string
+}
 
 export default function Browse (): ReactElement {
-  const {hex} = useParams();
+  const {hex}: Params = useParams();
   const result: ResultI = {numbers: [hex], lines: ['1', '2', '3', '4', '5', '6']}
   if (Number(hex) > 64 || Number(hex) < 1) {
     return (

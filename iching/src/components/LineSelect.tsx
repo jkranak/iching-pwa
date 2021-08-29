@@ -1,18 +1,23 @@
-import React, {useState, ReactElement} from 'react';
+import {useState, ReactElement} from 'react';
 import {useHistory} from 'react-router-dom';
-import hexnumber from '../data/hexnumber.json';
+import { HexNumberDict } from '../interfaces/dictionary';
+const hexNumber: HexNumberDict = require('../data/hexnumber.json');
 
 export default function LineSelect(): ReactElement {
   const [lines, setLines] = useState([0, 0, 0, 0, 0, 0])
   const [disable, setDisable] = useState(true);
   const history = useHistory();
 
-  const lineNums = {
+  interface NumDashConvert {
+    [index: number]: string
+  }
+
+  const lineNums: NumDashConvert = {
     7: '&mdash;&mdash;&mdash;',
     8: '&mdash;&nbsp;&nbsp;&nbsp;&nbsp;&mdash;'
   }
 
-  const handleClick = (number, index) => {
+  const handleClick = (number: number, index: number) => {
     const newLines = [...lines];
     newLines[index] = number;
     setLines(newLines);
@@ -22,7 +27,7 @@ export default function LineSelect(): ReactElement {
   }
 
   const handleSubmit = () => {
-    const num = hexnumber[lines.reverse().join('')];
+    const num = hexNumber[lines.reverse().join('')];
     history.push(`/browse/${num}`);
     setLines([0, 0, 0, 0, 0, 0]);
   }

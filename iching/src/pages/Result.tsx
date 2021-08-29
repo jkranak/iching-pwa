@@ -1,23 +1,30 @@
 import {useState, ReactElement} from 'react';
 import { Redirect, useParams } from 'react-router-dom';
-import hexdict from '../data/hexdict.json'
+import {HexDictionary} from '../interfaces/dictionary';
 import { otherInfo } from '../services/divination';
 import Navbar from '../components/Navbar';
 import Translation from '../components/Translation';
 import TrigramInfo from '../components/TrigramInfo';
 import {ResultI} from '../interfaces/result';
+const hexdict: HexDictionary = require('../data/hexdict.json');
+
+interface Params {
+  div: string
+  question: string
+}
 
 export default function Result (): ReactElement {
-  const {div, question} = useParams();
+  const {div, question}: Params = useParams();
   const result: ResultI | null = otherInfo(div, question);
   const [onLeftHover, setOnLeftHover] = useState(false);
   const [onRightHover, setOnRightHover] = useState(false);
   
-  function lineRender (num) {
+  function lineRender (num: string): string {
     if (num === '7') return '—————';
     if (num === '8') return '——&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——';
     if (num === '6') return '——X——';
     if (num === '9') return '——O——';
+    else return '';
   }
 
   if (result === null) {
@@ -41,12 +48,12 @@ export default function Result (): ReactElement {
               </tr>
             </thead>
             <tbody>
-              {result["divination"].map((el, index) => (
+              {result?["divination"].map((el, index) => (
               <tr key={index + 30}>
                 <td className="result__linenum">{6 - index}</td>
                 <td className="result__hexlines result__lines" dangerouslySetInnerHTML={{__html: lineRender(el)}}></td>
               </tr>
-              ))}
+              )): <></>}
             </tbody>
           </table>
           {result["question"] && <><h3>Your question:</h3> <p className="result__questiontext">{result["question"]}</p></>}

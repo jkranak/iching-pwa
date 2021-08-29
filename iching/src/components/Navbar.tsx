@@ -4,7 +4,7 @@ import LineSelect from './LineSelect';
 
 export default function Navbar (): ReactElement {
   const history = useHistory();
-  const [hexNumber, setHexNumber] = useState(0);
+  const [hexNumber, setHexNumber] = useState('0');
 
   return (
     <div className="navbar">
@@ -14,7 +14,7 @@ export default function Navbar (): ReactElement {
       >Home</button>
       <LineSelect />
       <form className="navbar__browse" 
-        onChange={(e) => setHexNumber(e.target.value)}
+        onChange={(e: React.FormEvent<HTMLFormElement>) => setHexNumber((e.target as HTMLInputElement).value)}
         onSubmit={() => history.push(`/browse/${hexNumber}`)}>
         <label className="navbar__label" 
           dangerouslySetInnerHTML={{__html: "<p>Browse by<br />hexagram number</p>"}}>
