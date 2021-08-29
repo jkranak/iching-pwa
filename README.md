@@ -29,6 +29,7 @@ The page has the option of consulting the I Ching using the yarrow-stalk or thre
 
 * [React](https://getbootstrap.com)
 * [Sass](https://jquery.com)
+* [Typescript](https://www.typescriptlang.org/)
 * [React Router Dom](https://www.npmjs.com/package/react-router-dom)
 
 

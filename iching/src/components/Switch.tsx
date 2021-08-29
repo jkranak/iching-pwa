@@ -1,5 +1,11 @@
+import {ReactElement} from 'react';
 
-export default function Switch({setTranslator, translator}) {
+interface Props {
+  translator: string
+  setTranslator: (t: string) => void
+}
+
+export default function Switch({setTranslator, translator}: Props): ReactElement {
 
   return (
     <div className="switch"> 

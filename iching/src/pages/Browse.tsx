@@ -1,10 +1,13 @@
+import {ReactElement} from 'react';
 import { useParams, Redirect } from 'react-router-dom';
 import hexdict from '../data/hexdict.json'
 import Navbar from '../components/Navbar';
 import Translation from '../components/Translation';
+import {ResultI} from '../interfaces/result';
 
-export default function Browse() {
+export default function Browse (): ReactElement {
   const {hex} = useParams();
+  const result: ResultI = {numbers: [hex], lines: ['1', '2', '3', '4', '5', '6']}
   if (Number(hex) > 64 || Number(hex) < 1) {
     return (
       <div>
@@ -28,7 +31,7 @@ export default function Browse() {
           </div>
       </div>
     </div>
-    <Translation hex={hex}/>
+    <Translation hex={hex} result={result}/>
     </>
   );
 }

@@ -1,9 +1,10 @@
 import hexNumber from '../data/hexnumber.json';
+import {ResultI} from '../interfaces/result';
 
 function yarrowStalk () {
   const remainders = num => num % 4 === 0 ? 4 : num % 4;
 
-  let results = [];
+  let results: string[] = [];
   for (let i = 0; i < 6; i++) {
     let line = 0;
     let remain = 49;
@@ -19,7 +20,7 @@ function yarrowStalk () {
 }
 
 function coinMethod () {
-  let results = [];
+  let results: string[] = [];
   for (let i = 0; i < 6; i++){
     let line = 0;
     for (let i = 0; i < 3; i++) {
@@ -30,14 +31,14 @@ function coinMethod () {
   return results;
 }
 
-export function hexagram (method) {
+export function hexagram (method: string) {
   let divination = [];
   if (method === 'yarrow') divination = yarrowStalk();
   else if (method === 'coin') divination = coinMethod();
   return divination.join('');
 }
 
-export function otherInfo (divStr, question) {
+export function otherInfo (divStr: string, question: string): ResultI | null {
   if (!divStr) return null;
   const divination = divStr.split('');
   if (divination.length !== 6) return null;

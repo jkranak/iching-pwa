@@ -1,14 +1,15 @@
-import {useState} from 'react';
+import {useState, ReactElement} from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import hexdict from '../data/hexdict.json'
 import { otherInfo } from '../services/divination';
 import Navbar from '../components/Navbar';
 import Translation from '../components/Translation';
 import TrigramInfo from '../components/TrigramInfo';
+import {ResultI} from '../interfaces/result';
 
-export default function Result() {
+export default function Result (): ReactElement {
   const {div, question} = useParams();
-  const result = otherInfo(div, question);
+  const result: ResultI | null = otherInfo(div, question);
   const [onLeftHover, setOnLeftHover] = useState(false);
   const [onRightHover, setOnRightHover] = useState(false);
   
@@ -43,7 +44,7 @@ export default function Result() {
               {result["divination"].map((el, index) => (
               <tr key={index + 30}>
                 <td className="result__linenum">{6 - index}</td>
-                <td className="result__hexlines result__lines"dangerouslySetInnerHTML={{__html: lineRender(el)}}></td>
+                <td className="result__hexlines result__lines" dangerouslySetInnerHTML={{__html: lineRender(el)}}></td>
               </tr>
               ))}
             </tbody>
@@ -94,7 +95,7 @@ export default function Result() {
           </div>
         </div>
       </div>
-      <Translation hex={0} result={result} />
+      <Translation hex={'0'} result={result} />
     </>
   );
 }

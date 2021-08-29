@@ -1,11 +1,17 @@
-import { useState } from 'react';
+import { useState, ReactElement } from 'react';
 import translations from '../data/translations.json';
 import hexdict from '../data/hexdict.json';
 import Switch from './Switch';
+import {ResultI} from '../interfaces/result';
 
-function Translation({hex, result}) {
+interface Props {
+  hex: string,
+  result: ResultI
+}
+
+export default function Translation({hex, result}: Props): ReactElement {
   const [translator, setTranslator] = useState('legge');
-  const divResult = hex === 0 ? result : {
+  const divResult = hex === '0' ? result : {
     numbers: [hex],
     lines: [1, 2, 3, 4, 5, 6]
   };
@@ -49,5 +55,3 @@ function Translation({hex, result}) {
     </div>
   );
 }
-
-export default Translation;

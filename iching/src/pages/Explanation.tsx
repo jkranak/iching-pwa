@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {ReactElement} from 'react'
 import Navbar from '../components/Navbar'
 
-export const Explanation = () => {
+export default function Explanation (): ReactElement {
   return (
     <div className="explanation">
       <Navbar />

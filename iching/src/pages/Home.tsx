@@ -1,11 +1,11 @@
-import React, { useState} from 'react';
+import React, { useState, ReactElement } from 'react';
 import { useHistory } from 'react-router-dom';
 import {hexagram} from '../services/divination';
 import Navbar from '../components/Navbar';
-import { QuestionInfo } from '../components/QuestionInfo';
-import { MethodInfo } from '../components/MethodInfo';
+import QuestionInfo from '../components/QuestionInfo';
+import MethodInfo from '../components/MethodInfo';
 
-export default function Home () {
+export default function Home (): ReactElement {
   const history = useHistory();
   const [question, setQuestion] = useState('');
   const [questHover, setQuestHover] = useState(false);
