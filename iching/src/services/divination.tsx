@@ -72,14 +72,14 @@ export function otherInfo (divStr: string, question: string): ResultI {
     }
     return {
       divination: divination.reverse(), 
-      numbers: [hexNumber[divination1].toString(), hexNumber[divinationChange].toString()], 
+      numbers: [hexNumber[divination1], hexNumber[divinationChange]], 
       lines,
       question
     };
   }
   return {
     divination: divination.reverse(), 
-    numbers: [hexNumber[divination.join('')].toString()], 
+    numbers: [hexNumber[divination.join('')]], 
     lines: [],
     question
   };

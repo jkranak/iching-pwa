@@ -12,7 +12,7 @@ export interface HexDictionary {
 }
 
 export interface HexNumberDict {
-  [index: string]: number
+  [index: string]: string
 }
 
 interface TriDictEntry {

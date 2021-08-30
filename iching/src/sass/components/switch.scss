@@ -26,13 +26,13 @@
   }
   p {
     margin: .5rem 0;
-    color: $color-bright;
+    color: $color-lighter;
     @include mini {
       font-size: .9rem;
     }
   }
   a {
-    color: $color-bright;
+    color: $color-light;
   }
   button {
     width: 8rem;

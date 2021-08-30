@@ -1,0 +1,51 @@
+.browse {
+  position: absolute;
+  background-color: $color-primary-dark;
+  top: 4.7rem;
+  width: 25rem;
+  left: calc(100vw - 27rem);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: center;
+  &__lineselect {
+    padding: .8rem;
+    background-color: $color-primary-main;
+  }
+  &__button {
+    background-color: $color-primary-light;
+    font-size: 4rem;
+    line-height: 3rem;
+    color: black;
+    padding: 0;
+    margin: 0;
+    letter-spacing: -.1rem;
+    vertical-align: top;
+  }
+  &__grey {
+    opacity: .2;
+  }
+  &__submit {
+    width: 100%;
+    margin: 0;
+  }
+  &__number {
+    @include flex-column;
+    background-color: $color-primary-main;
+    height: 23rem;
+  }
+  &__input {
+    margin: 2rem auto;
+    display: flex;
+  }
+  &__label {
+    text-align: center;
+  }
+  &__linerow {
+    display: flex;
+  }
+  &__number {
+    margin-left: 1rem;
+  }
+}
