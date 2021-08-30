@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+/iching/build
+/iching/node_modules

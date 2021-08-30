@@ -49,7 +49,7 @@ export default function Browse(): ReactElement {
         onChange={(e: React.FormEvent<HTMLFormElement>) => setHexBrowse((e.target as HTMLInputElement).value)}
         onSubmit={() => history.push(`/browse/${hexBrowse}`)}>
         <label className="browse__label" 
-          dangerouslySetInnerHTML={{__html: "<p>Browse by<br />hexagram number</p>"}}>
+          dangerouslySetInnerHTML={{__html: "<p>Enter<br />hexagram number<br />(1&ndash;64)</p>"}}>
         </label>
         <input className="browse__input" required type="number"
           min="1" max="64" id="hexinput" placeholder="#"/>
