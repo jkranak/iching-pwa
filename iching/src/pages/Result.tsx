@@ -12,10 +12,9 @@ interface Params {
   div: string
   question: string
 }
-
 export default function Result (): ReactElement {
   const {div, question}: Params = useParams();
-  const result: ResultI | null = otherInfo(div, question);
+  const result: ResultI = otherInfo(div, question);
   const [onLeftHover, setOnLeftHover] = useState(false);
   const [onRightHover, setOnRightHover] = useState(false);
   
@@ -27,7 +26,7 @@ export default function Result (): ReactElement {
     else return '';
   }
 
-  if (result === null) {
+  if (result.numbers[0] === '') {
     return (
       <div>
         <Redirect to={'/404'}/>
@@ -48,12 +47,13 @@ export default function Result (): ReactElement {
               </tr>
             </thead>
             <tbody>
-              {result?["divination"].map((el, index) => (
+
+              {result["divination"].map((el, index) => (
               <tr key={index + 30}>
                 <td className="result__linenum">{6 - index}</td>
                 <td className="result__hexlines result__lines" dangerouslySetInnerHTML={{__html: lineRender(el)}}></td>
               </tr>
-              )): <></>}
+              ))}
             </tbody>
           </table>
           {result["question"] && <><h3>Your question:</h3> <p className="result__questiontext">{result["question"]}</p></>}

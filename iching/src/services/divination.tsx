@@ -1,5 +1,5 @@
 import { HexNumberDict } from '../interfaces/dictionary';
-import {ResultI} from '../interfaces/result';
+import {ResultI, emptyResult} from '../interfaces/result';
 const hexNumber: HexNumberDict = require('../data/hexnumber.json');
 
 
@@ -40,13 +40,13 @@ export function hexagram (method: string) {
   return divination.join('');
 }
 
-export function otherInfo (divStr: string, question: string): ResultI | null {
-  if (!divStr) return null;
+export function otherInfo (divStr: string, question: string): ResultI {
+  if (!divStr) return emptyResult;
   const divination = divStr.split('');
-  if (divination.length !== 6) return null;
+  if (divination.length !== 6) return emptyResult;
   for (let num of divination) {
     if (Number(num) < 6) {
-      return null;
+      return emptyResult;
     }
   }
   if (divination.includes('6') || divination.includes('9')) {

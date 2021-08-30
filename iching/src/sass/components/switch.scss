@@ -1,11 +1,14 @@
 .switch {
   text-align: center;
-  background-color: $color-primary-darker;
+  background-color: $color-primary-dark;
   position: sticky;
   top: 5vw;
   left: 1.5vw;
   width: 12rem;
   padding: .3rem;
+  button {
+    background-color: $color-primary-darker;
+  }
   @include tablet {
     width: 8rem;
     left: 1vw;
@@ -23,13 +26,13 @@
   }
   p {
     margin: .5rem 0;
-    color: $color-primary-lighter;
+    color: $color-bright;
     @include mini {
       font-size: .9rem;
     }
   }
   a {
-    color: $color-primary-light;
+    color: $color-bright;
   }
   button {
     width: 8rem;

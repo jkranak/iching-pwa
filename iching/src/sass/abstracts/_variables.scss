@@ -1,38 +1,82 @@
-$color-primary-main: #AA7839;
-$color-primary-lighter: #FFD9AA;
-$color-primary-light: #D4A66A;
-$color-primary-dark: #805115;
-$color-primary-darker: #552F00;
 
-$color-secondary-main: #333676;
-$color-secondary-lighter: #7F81B1;
-$color-secondary-light: #545894;
-$color-secondary-dark: #191C59;
-$color-secondary-darker: #080B3B;
+// $color-primary-main: rgba(170,120, 57,$opacity1);
+// $color-primary-lighter: rgba(255,217,170,$opacity1);
+// $color-primary-light: rgba(212,165,106,$opacity1);
+// $color-primary-dark: rgba(128, 81, 22,$opacity2);
+// $color-primary-darker: rgba( 85, 48,  0,$opacity2);
 
-$color-tertiary-main: #277650;
-$color-tertiary-lighter: #76B295;
-$color-tertiary-light: #4A9470;
-$color-tertiary-dark: #0F5935;
-$color-tertiary-darker: #003B1F;
+// $color-secondary-main: rgba( 51, 54,118,$opacity2);
+// $color-secondary-lighter: rgba(127,129,177,$opacity2);
+// $color-secondary-light: rgba( 84, 88,147,$opacity2);
+// $color-secondary-dark: rgba( 26, 29, 89,$opacity2);
+// $color-secondary-darker: rgba(  9, 11, 59,$opacity2);
 
-// $color-primary-main: #BBB46D;
-// $color-primary-lighter: #fcfbec;
-// $color-primary-light: #DFDAA0;
-// $color-primary-dark: #9B9449;
-// $color-primary-darker: #7F7729;
+// $color-tertiary-main: rgba( 40,118, 81,$opacity2);
+// $color-tertiary-lighter: rgba(118,177,149,$opacity2);
+// $color-tertiary-light: rgba( 74,148,112,$opacity2);
+// $color-tertiary-dark: rgba( 15, 89, 54,$opacity2);
+// $color-tertiary-darker: rgba(  0, 59, 31,$opacity2);
 
-// $color-secondary-main: #7A477A;	
-// $color-secondary-lighter: #B195B1;
-// $color-secondary-light: #916891;
-// $color-secondary-dark: #652F65;
-// $color-secondary-darker: #521A52;
+$opacity1: 0.5;
+$opacity2: 1;
 
-// $color-tertiary-main: #545483;
-// $color-tertiary-lighter: #A3A3BC;
-// $color-tertiary-light: #77779C;
-// $color-tertiary-dark: #3C3C6D;
-// $color-tertiary-darker: #262659;
+$color-primary-main: rgba(187,180,109,$opacity1);
+$color-primary-lighter: rgba(255,251,215,$opacity1);
+$color-primary-light: rgba(223,218,160,$opacity1);
+$color-primary-dark: rgba(155,148, 73,$opacity2);
+$color-primary-darker: rgba(127,119, 41,$opacity2);
+
+$color-secondary-main: rgba(122, 71,122,$opacity2);
+$color-secondary-lighter: rgba(177,149,177,$opacity2);
+$color-secondary-light: rgba(145,104,145,$opacity2);
+$color-secondary-dark: rgba(101, 47,101,$opacity2);
+$color-secondary-darker: rgba( 82, 26, 82,$opacity2);
+
+$color-tertiary-main: rgba( 84, 84,131,$opacity2);
+$color-tertiary-lighter: rgba(163,163,188,$opacity2);
+$color-tertiary-light: rgba(119,119,156,$opacity2);
+$color-tertiary-dark: rgba( 60, 60,109,$opacity2);
+$color-tertiary-darker: rgba( 38, 38, 89,$opacity2);
+$color-bright: white;
+
+// $color-primary-main: rgba(170,120, 57,$opacity1);
+// $color-primary-lighter: rgba(255,217,170,$opacity1);
+// $color-primary-light: rgba(212,166,106,$opacity1);
+// $color-primary-dark: rgba(128, 81, 21,$opacity2);
+// $color-primary-darker: rgba( 85, 47,  0,$opacity2);
+
+// $color-secondary-main: rgba( 51, 54,118,$opacity1);
+// $color-secondary-lighter: rgba(127,129,177,$opacity1);
+// $color-secondary-light: rgba( 84, 88,148,$opacity1);
+// $color-secondary-dark: rgba( 25, 28, 89,$opacity2);
+// $color-secondary-darker: rgba(  8, 11, 59,$opacity2);
+
+// $color-tertiary-main: rgba( 39,118, 80,$opacity1);
+// $color-tertiary-lighter: rgba(118,178,149,$opacity1);
+// $color-tertiary-light: rgba( 74,148,112,$opacity1);
+// $color-tertiary-dark: rgba( 15, 89, 53,$opacity2);
+// $color-tertiary-darker: rgba(  0, 59, 31,$opacity2);
+
+
+
+// $color-primary-main: rgba( 50, 56,117,$opacity1);
+// $color-primary-lighter: rgba(125,130,176,$opacity1);
+// $color-primary-light: rgba( 83, 89,147,$opacity1);
+// $color-primary-dark: rgba( 25, 31, 88,$opacity2);
+// $color-primary-darker: rgba(  8, 13, 59,$opacity2);
+
+// $color-secondary-main: rgba(170,157, 57,$opacity2);
+// $color-secondary-lighter: rgba(255,245,170,$opacity2);
+// $color-secondary-light: rgba(212,201,106,$opacity2);
+// $color-secondary-dark: rgba(128,116, 21,$opacity2);
+// $color-secondary-darker: rgba( 85, 75,  0,$opacity2);
+
+// $color-tertiary-main: rgba(170,118, 57,$opacity2);
+// $color-tertiary-lighter: rgba(255,216,170,$opacity2);
+// $color-tertiary-light: rgba(212,164,106,$opacity2);
+// $color-tertiary-dark: rgba(128, 79, 21,$opacity2);
+// $color-tertiary-darker: rgba( 85, 46,  0,$opacity2);
+
 
 $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 

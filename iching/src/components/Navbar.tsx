@@ -12,7 +12,7 @@ export default function Navbar (): ReactElement {
         className="navbar__home navbar__button" 
         onClick={() => history.push('/')}
       >Home</button>
-      <LineSelect />
+      {/* <LineSelect /> */}
       <form className="navbar__browse" 
         onChange={(e: React.FormEvent<HTMLFormElement>) => setHexNumber((e.target as HTMLInputElement).value)}
         onSubmit={() => history.push(`/browse/${hexNumber}`)}>

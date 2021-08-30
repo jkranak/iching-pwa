@@ -58,6 +58,7 @@
     background-color: white;
     border-radius: 100%;
     font-weight: 800;
+    color: $color-secondary-darker;
   }
   @include tablet {
     width: 70vw;

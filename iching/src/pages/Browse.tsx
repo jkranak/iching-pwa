@@ -12,7 +12,7 @@ interface Params {
 
 export default function Browse (): ReactElement {
   const {hex}: Params = useParams();
-  const result: ResultI = {numbers: [hex], lines: ['1', '2', '3', '4', '5', '6']}
+  const result: ResultI = {divination: [''], numbers: [hex], lines: ['1', '2', '3', '4', '5', '6']}
   if (Number(hex) > 64 || Number(hex) < 1) {
     return (
       <div>
