@@ -4,9 +4,10 @@
   </a>
 
   <h3 align="center">The I Ching</h3>
-  <a align="center" href="theiching.net">theiching.net</a>
+  
 
   <p align="center">
+    <a href="theiching.net">theiching.net</a><br />
     A program for consulting the I Ching.
   </p>
 </p>
