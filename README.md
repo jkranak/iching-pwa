@@ -7,7 +7,7 @@
   
 
   <p align="center">
-    <a href="theiching.net">theiching.net</a><br />
+    <a href="https://theiching.net">theiching.net</a><br />
     A program for consulting the I Ching.
   </p>
 </p>
