@@ -3,5 +3,8 @@
   width: 20vw;
   background-color: $color-primary-light;
   border: 1px solid $color-primary-light;
-  
+  width: 200px;
+  &__infobox {
+    width: 200px;
+  }
 }

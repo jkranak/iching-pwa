@@ -45,6 +45,7 @@
   &__infobox {
     border: .5rem solid $color-primary-darker;
     position: relative;
+    size: 200px;
   }
   &__hexinfos {
     @include flex-row;
@@ -85,18 +86,22 @@
     position: absolute;
     background-color: white;
     box-shadow: $box-shadow;
-    transform: translateX(-15rem);
+    transform: translateX(-10rem);
+    z-index: 3;
   }
   &__righttrigram {
     position: absolute;
     background-color: white;
     box-shadow: $box-shadow;
-    transform: translateX(15rem);
+    transform: translateX(12rem);
   }
   @include phone {
     background-color: $color-primary-lighter;
   }
   @include mini {
     background-color: $color-primary-lighter;
+    &__lefttrigram {
+      transform: translateX(6rem);
+    }
   }
 }

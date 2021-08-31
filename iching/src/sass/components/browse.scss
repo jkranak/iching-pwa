@@ -9,6 +9,7 @@
   flex-direction: row;
   align-items:flex-start;
   justify-content: center;
+  z-index: 4;
   &__lineselect {
     padding: .8rem;
     background-color: $color-primary-main;

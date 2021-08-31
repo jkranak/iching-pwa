@@ -2,7 +2,7 @@ import {ReactElement} from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Result from './pages/Result';
-import BrowsePage from './pages/Browse';
+import BrowsePage from './pages/BrowsePage';
 import FourOFour from './pages/404';
 import './sass/main.scss';
 import Explanation from './pages/Explanation';
