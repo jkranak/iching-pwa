@@ -12,11 +12,6 @@
   </p>
 </p>
 
-## Contributors
-
-Joseph Kranak  [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 ## About The Project
 
@@ -69,6 +64,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Joseph Kranak: [https://www.linkedin.com/in/joseph-kranak/](https://www.linkedin.com/in/joseph-kranak/)
 
 Project Link: [https://github.com/jkranak/iching-pwa](https://github.com/jkranak/iching-pwa)
+
+## Contributors
+Joseph Kranak  [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
